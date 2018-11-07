@@ -1,0 +1,33 @@
+body {
+    background-color: blueviolet;
+}
+
+h1 {
+    color: deepskyblue;
+    background-color: whitesmoke;
+}
+h2 {
+    color: rosybrown
+}
+
+#navigation {background-color: darkviolet;
+}
+
+#header {background-color: darkslategray;
+}
+
+#content {background-color: darkkhaki;
+          padding: 20px;
+}
+
+#footer {background-color: mediumslateblue;
+}
+
+img {
+    margin: 1em, auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90;
+    max-width: 300px;
+}
