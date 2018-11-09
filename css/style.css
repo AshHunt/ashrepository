@@ -1,27 +1,35 @@
 body {
     background-color: blueviolet;
+    margin: 0;
+  
 }
 
 h1 {
     color: deepskyblue;
-    background-color: whitesmoke;
+    background-color: slateblue;
 }
 h2 {
     color: rosybrown
 }
 
 #navigation {background-color: darkviolet;
+    position: fixed;
+    width: 100vw;
+    top: 1;
+    left: 0;
+    padding: 50px;
 }
 
-#header {background-color: darkslategray;
+#header {background-color: rgb(219, 60, 153);
 }
 
-#content {background-color: darkkhaki;
+#content {background-color: rosybrown;
           padding: 20px;
 }
 
 #footer {background-color: mediumslateblue;
 }
+
 
 img {
     margin: 1em, auto;
@@ -30,4 +38,32 @@ img {
     margin-right: auto;
     width: 90;
     max-width: 300px;
+}
+.container {
+    
+}
+#header > h1{
+    background-color: aliceblue;
+}
+#header h1, #header h2 {
+    color: skyblue;
+}#navigation > ul > li {
+    display: inline;
+    position: relative;
+    padding: 1px;
+
+}
+#navigation .dropdown{
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+
+
+}
+
+#navigation a:hover + .dropdown,
+#navigation a + .dropdown:hover{
+    display: block;
 }
