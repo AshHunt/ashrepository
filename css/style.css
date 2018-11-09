@@ -15,9 +15,8 @@ h2 {
 #navigation {background-color: darkviolet;
     position: fixed;
     width: 100vw;
-    top: 1;
+    top: 0;
     left: 0;
-    padding: 50px;
 }
 
 #header {background-color: rgb(219, 60, 153);
@@ -39,7 +38,7 @@ img {
     width: 90;
     max-width: 300px;
 }
-.container {
+.container {position: relative;
     
 }
 #header > h1{
@@ -50,14 +49,13 @@ img {
 }#navigation > ul > li {
     display: inline;
     position: relative;
-    padding: 1px;
+    padding: 10px;
 
 }
 #navigation .dropdown{
     display: none;
     position: absolute;
-    top: 20px;
-    left: 0;
+    top: 28px;
 
 
 
