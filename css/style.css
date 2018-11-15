@@ -59,7 +59,7 @@ h2 {
     }
 
     #content {
-        background-color: rosybrown;
+        background-color: rgba(187, 105, 105, 0.452);
         padding: 20px;
         grid-area: content;
     }
