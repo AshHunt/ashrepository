@@ -101,7 +101,7 @@
             }
         ],
         "linebreak-style": [
-            "error",
+            "none",
             "unix"
         ],
         "lines-around-comment": "off",
