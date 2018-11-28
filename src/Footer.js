@@ -1,3 +1,5 @@
+export default function Footer(){
+return`
 <div id="footer">
     <div class="container">
         <h3>Contact Info</h3>
@@ -14,3 +16,5 @@
         </ul>
 </div>                
     </div>
+    `;
+}
