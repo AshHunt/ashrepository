@@ -1,22 +1,19 @@
+export default function Navigation(state){
+    var links = state[state.active].links;
+    for(let i = 0; i < links.length; i++){
+       list+=
+         `<li>
+        <a href="#">${links[i]}
+        </li>
+        `;
+        console.log(list);
+    }
+
+return `
 <div id="navigation">
     <ul class="container">
-           <li>
-                <a href="./blog">blog</a>
-           </li>
-         <li>
-            <a href="./contact">contact</a>
-         </li>
-         <li>
-            <a href="./projects">projects</a>
-            <ul class="dropdown">
-                <li>linkedin</li>
-                <li>facebook</li>
-                <li>email</li>
-                <a href="mailto:aahunt92@gmail.com"></a>
-            </ul>
-         </li>
-         <li>fourth</li>
-         <li>fifth</li>
-         <li>sixth</li>
+        ${list}
     </ul>
 </div>
+`;
+}
