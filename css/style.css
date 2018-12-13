@@ -1,4 +1,4 @@
-body {
+#root {
     background-color: blueviolet;
     display: grid;
     min-height: 100vh;

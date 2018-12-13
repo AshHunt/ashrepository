@@ -5,6 +5,13 @@ import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Navigo from 'navigo';
 
+document.querySelector('#root').innerHTML = `
+    ${Navigation}
+    ${Header}
+    ${Content}
+    ${Footer}
+`;
+
 var router = new Navigo(window.location.origin);
 
 
