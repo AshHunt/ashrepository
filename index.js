@@ -5,12 +5,6 @@ import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Navigo from 'navigo';
 
-document.querySelector('#root').innerHTML = `
-    ${Navigation}
-    ${Header}
-    ${Content}
-    ${Footer}
-`;
 
 var router = new Navigo(window.location.origin);
 
@@ -38,45 +32,26 @@ var State = {
 
 var root = document.querySelector('#root');
 
-document.querySelector('#root').innerHTML += `
-${Content(state)}
-${Footer(state)}
-${Header(state)}
-${Navigation(state)}
-`;
+function handleNavigation(params){
+    State.active = params.page;
 
-document.querySelector('h1')
-.addEventListener(
-    'click', 
-    (event) => console.log(event.target)
-);
- links[2] =document.querySelectorAll('#navigation a')
- for(var i = 0; i < links.length; i++)
- {
-while(i < links.length) {
-    links[i].addEventListener('click',
-    handleNavigation
-    );
-    i++;
+    render(State); // eslint-disable-line
 }
- }
- function handleNavigation(event){
-     event.preventDefault();
-     console.log(event.target.textContent);
-     State.active = event.target.textContent;
-     
- }
 
-links[0].addEventListener(
-    'click',
-(event) => {
-    event.preventDefault();
-    console.log(event.target) 
-},
-        handleNavigation
-);
+function render(state){
+    root.innerHTML = `
+      ${Navigation(state)}
+      ${Header(state)}
+      ${Content(state)}
+      ${Footer(state)}
+  `;
+
+    greet();
+
+    router.updatePageLinks();
+}
 
 router
-    .on('/:page', console.log)
-    .on('/', () => console.log('I am on the home page!'))
+    .on('/:page', handleNavigation)
+    .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
