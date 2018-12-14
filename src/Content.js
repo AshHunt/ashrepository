@@ -6,7 +6,7 @@ var Screens = {
 
 };
 
-export default function Content() {
+export default function Content(state) {
     return`
     <div id="content">
 <div class="container">

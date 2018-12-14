@@ -1,4 +1,4 @@
-export default function Blog(){
+export default function Blog(state){
     return `
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis provident nostrum repellendus voluptates consequatur, minima vitae officiis ab quod, iusto ut nemo quibusdam excepturi quos nam nisi ullam ex culpa!</p>
       <p>Quidem temporibus doloremque odio perferendis ducimus illum, labore suscipit rerum cupiditate, autem quaerat soluta eos esse. Minima, provident eaque id fuga, illum aperiam atque a earum soluta sed nostrum amet.</p>
