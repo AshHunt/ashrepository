@@ -1,5 +1,6 @@
 import Content from './src/Content';
 import Footer from './src/Footer';
+import greet from './src/Greeting';
 import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Navigo from 'navigo';
@@ -19,7 +20,7 @@ var State = {
     'blog': {
         'title': 'Read my amazing blog',
         'links': ['home', 'contact', 'projects']
-},
+    },
     'contact': {
         'title': 'Call me here',
         'links': ['home', 'blog', 'projects']
