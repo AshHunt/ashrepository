@@ -4,14 +4,18 @@ import greet from './src/Greeting';
 import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Navigo from 'navigo';
+import Store from './src/Store';
+
 
 
 var router = new Navigo(window.location.origin);
 
+var root = document.querySelector('#root');
+
 
 
 var State = {
-    
+    'posts': [],
     'active': 'home',
     'home': {
         'title': 'Welcome to my Savvy Coders Porftolio Project',
@@ -31,12 +35,17 @@ var State = {
     }
 };
 
-var root = document.querySelector('#root');
+var store = new Store(State);
+
 
 function handleNavigation(params){
-    State.active = params.page;
+    store.dispatch((state) => {
+    state.active = params.page;
 
-    render(State); // eslint-disable-line
+        return state;
+    });
+
+ 
 }
 
 function render(state){
@@ -52,6 +61,8 @@ function render(state){
     router.updatePageLinks();
 }
 
+store.addListener(render);
+
 router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
@@ -59,9 +70,10 @@ router
 
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
-    .then((posts) => posts.forEach((post) => {
-        if(post.id % 2 === 0){
-        console.log(post.title)
-        }
+    .then((posts) => store.dispatch((state) => {
+       state.posts = posts;
+
+       return state;
+        
     }));
         
