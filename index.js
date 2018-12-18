@@ -4,7 +4,7 @@ import greet from './src/Greeting';
 import Navigation from './src/Navigation';
 import Header from './src/Header';
 import Navigo from 'navigo';
-import Store from './src/Store';
+import Store  from './src/Store';
 
 
 
@@ -43,7 +43,7 @@ function handleNavigation(params){
     state.active = params.page;
 
         return state;
-    });
+    });s
 
  
 }
